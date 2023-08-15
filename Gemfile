@@ -49,3 +49,5 @@ end
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
 gem 'rails-controller-testing'
+gem 'factory_bot_rails'
+gem 'faker'
