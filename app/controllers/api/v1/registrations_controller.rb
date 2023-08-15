@@ -1,4 +1,4 @@
-class Api::V1::UsersController < ApplicationController
+class Api::V1::RegistrationsController < Devise::RegistrationsController
   def create
     @user= User.new(signup_params)
     if @user.save
