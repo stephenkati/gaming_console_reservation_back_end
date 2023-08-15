@@ -46,8 +46,8 @@ group :development do
   # gem "spring"
 end
 
-gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
-gem 'rails-controller-testing'
 gem 'factory_bot_rails'
 gem 'faker'
+gem 'rails-controller-testing'
+gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
+gem 'rubocop', '>= 1.0', '< 2.0'
