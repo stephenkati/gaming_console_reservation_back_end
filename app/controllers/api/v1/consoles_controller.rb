@@ -9,6 +9,16 @@ class Api::V1::ConsolesController < ApplicationController
     end
   end
 
+  def show
+    @console = Console.find_by(id: params[:id])
+
+    if @console
+      render json: { status: 'success', message: 'Console loaded', data: @console }, status: :ok
+    else
+      render json: { status: 'error', message: 'Console not found', data: nil }, status: :not_found
+    end
+  end
+
   def create
     @console = Console.new(console_params)
 
@@ -17,6 +27,16 @@ class Api::V1::ConsolesController < ApplicationController
     else
       render json: { status: 'error', message: 'Console not created', data: @console.errors },
              status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @console = Console.find_by(id: params[:id])
+
+    if @console.nil?
+      render json: { status: 'error', message: 'Console not found', data: nil }, status: :not_found
+    elsif @console.destroy
+      render json: { status: 'success', message: 'Console deleted', data: @console }, status: :ok
     end
   end
 
