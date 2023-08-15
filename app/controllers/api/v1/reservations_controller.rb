@@ -9,6 +9,12 @@ class Api::V1::ReservationsController < ApplicationController
     render json: @reservation
   end
 
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    render json: @reservation
+  end
+
   private
 
   def reservation_params
