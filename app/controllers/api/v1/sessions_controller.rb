@@ -1,8 +1,8 @@
 class Api::V1::SessionsController < Devise::SessionsController
   respond_to :json
   def create
-    self.resource = warden.authenticate!(auth_options)
-    if resource
+     self.resource = User.find_for_database_authentication(username: params[:username])
+    if resource && resource.valid_password?(params[:password])
       sign_in(resource)
       token = resource.authentication_token
       render json: { user: resource, token: }, status: :ok
