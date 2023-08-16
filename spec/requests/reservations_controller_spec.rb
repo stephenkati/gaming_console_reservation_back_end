@@ -17,4 +17,39 @@ RSpec.describe Api::V1::ReservationsController, type: :request do
       expect(response_json.length).to eq(4)
     end
   end
+
+  describe '#create' do
+    let(:user) { create(:user) }
+    let(:console) { create(:console) }
+    let(:valid_attributes) do
+      {
+        reservation: {
+          reserve_date: Date.today,
+          city: 'São Paulo',
+          console_id: console.id
+        }
+      }
+    end
+
+    let(:invalid_attributes) do
+      {
+        reservation: {
+          reserve_date: Date.today,
+          city: 'São Paulo'
+        }
+      }
+    end
+
+    it 'creates a reservation' do
+      auth_headers = user.create_new_auth_token
+      post api_v1_reservations_path, params: valid_attributes, headers: auth_headers, as: :json
+      expect(response).to have_http_status(:created)
+    end
+
+    it 'returns a 422 if the reservation is not created' do
+      auth_headers = user.create_new_auth_token
+      post api_v1_reservations_path, params: invalid_attributes, headers: auth_headers, as: :json
+      expect(response).to have_http_status(:unprocessable_entity)
+    end
+  end
 end
