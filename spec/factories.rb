@@ -12,4 +12,11 @@ FactoryBot.define do
     description { Faker::Lorem.paragraph }
     photo { Faker::Internet.url }
   end
+
+  factory :reservation do
+    user
+    console
+    city { Faker::Address.city }
+    reserve_date { Faker::Date.forward(days: 23) }
+  end
 end
