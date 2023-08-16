@@ -4,12 +4,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  namespace :api do
+    namespace :v1 do
+      resources :consoles, only: [:index, :create, :destroy, :show]
+      resources :reservations, only: [:create, :index, :destroy]
+    end
+  end
+
   namespace :api, defaults: { format: :json } do
     devise_for :users, controllers: {
       registrations: 'api/users/registrations',
       sessions: 'api/users/sessions'
     }
-
-    resources :reservations, only: [:create, :index, :destroy]
   end
 end
