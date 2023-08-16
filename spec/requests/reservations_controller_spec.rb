@@ -52,4 +52,21 @@ RSpec.describe Api::V1::ReservationsController, type: :request do
       expect(response).to have_http_status(:unprocessable_entity)
     end
   end
+
+  describe '#destroy' do
+    let(:user) { create(:user) }
+    let(:reservation) { create(:reservation, user: user) }
+
+    it 'deletes a reservation' do
+      auth_headers = user.create_new_auth_token
+      delete api_v1_reservation_path(reservation.id), headers: auth_headers
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'returns a 404 if the reservation is not found' do
+      auth_headers = user.create_new_auth_token
+      delete api_v1_reservation_path(999), headers: auth_headers
+      expect(response).to have_http_status(:not_found)
+    end
+  end
 end
