@@ -8,7 +8,7 @@ gem 'omniauth'
 gem 'rails', '~> 7.0.7'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
-gem 'rack-cors'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
@@ -48,11 +48,10 @@ group :development do
   # gem "spring"
 end
 
+gem 'cancancan'
+gem 'devise'
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'rails-controller-testing'
-gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
-gem 'cancancan'
-gem 'devise'
 gem 'rswag'
-gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'rubocop'
