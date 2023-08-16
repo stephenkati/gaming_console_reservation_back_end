@@ -27,5 +27,10 @@ RSpec.describe User, type: :model do
       user2 = build(:user, email: user.email)
       expect(user2).to be_invalid
     end
+
+    it 'should be invalid if password is less than 6 characters' do
+      user.password = 'abc'
+      expect(user).to be_invalid
+    end
   end
 end
