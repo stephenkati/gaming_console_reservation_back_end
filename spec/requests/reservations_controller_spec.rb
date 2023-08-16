@@ -4,10 +4,10 @@ RSpec.describe Api::V1::ReservationsController, type: :request do
   describe '#index' do
     it 'returns a list of reservations' do
       user = create(:user)
-      create_list(:reservation, 4, user: user)
-      
+      create_list(:reservation, 4, user:)
+
       auth_headers = user.create_new_auth_token
-      
+
       get api_v1_reservations_path, headers: auth_headers
 
       expect(response).to have_http_status(:ok)
@@ -55,7 +55,7 @@ RSpec.describe Api::V1::ReservationsController, type: :request do
 
   describe '#destroy' do
     let(:user) { create(:user) }
-    let(:reservation) { create(:reservation, user: user) }
+    let(:reservation) { create(:reservation, user:) }
 
     it 'deletes a reservation' do
       auth_headers = user.create_new_auth_token

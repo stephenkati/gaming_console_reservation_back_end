@@ -5,8 +5,8 @@ class Reservation < ApplicationRecord
   validate :reserve_date_cannot_be_in_the_past
 
   def reserve_date_cannot_be_in_the_past
-    if reserve_date.present? && reserve_date < Date.today
-      errors.add(:reserve_date, "can't be in the past")
-    end
+    return unless reserve_date.present? && reserve_date < Date.today
+
+    errors.add(:reserve_date, "can't be in the past")
   end
 end
