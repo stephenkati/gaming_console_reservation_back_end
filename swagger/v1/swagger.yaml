@@ -114,6 +114,66 @@ paths:
               - purchase_price
               - rental_price
               - description
+    delete:
+      summary: Delete a specific console
+      tags:
+      - Console
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Console deleted successfully
+          content:
+            application/json:
+              examples:
+                example_0:
+                  value:
+                    status: Success
+                    message: Console deleted successfully
+                    data:
+                      id: 1
+                      name: NSWICTH
+                      photo: image_url
+                      purchase_price: 10000
+                      rental_price: 100
+                      description: Learn about Nintendo Switch Lite. It is compact, lightweight, and dedicated to handheld play. Making it perfect for gamers on the move.
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      photo:
+                        type: string
+                      purchase_price:
+                        type: number
+                      rental_price:
+                        type: number
+                      description:
+                        type: string
+                    required:
+                    - id
+                    - name
+                    - photo
+                    - purchase_price
+                    - rental_price
+                    - description
+                required:
+                - status
+                - message
+                - data
   "/api/v1/reservations":
     post:
       summary: create a reservation
