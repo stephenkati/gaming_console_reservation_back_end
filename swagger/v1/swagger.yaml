@@ -1,0 +1,77 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/reservations":
+    post:
+      summary: create a reservation
+      tags:
+      - Reservations
+      parameters: []
+      responses:
+        '201':
+          description: reservation created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                city:
+                  type: string
+                reserve_date:
+                  type: string
+                console_id:
+                  type: integer
+              required:
+              - user_id
+              - city
+              - reserve_date
+              - console_id
+    get:
+      summary: Fetch reservations for a user
+      tags:
+      - Reservations
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: reservations found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    user_id:
+                      type: integer
+                    city:
+                      type: string
+                    reserve_date:
+                      type: string
+                    console_id:
+                      type: integer
+                  required:
+                  - id
+                  - user_id
+                  - city
+                  - reserve_date
+                  - console_id
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
