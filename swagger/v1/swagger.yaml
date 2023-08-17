@@ -11,8 +11,7 @@ paths:
       - Reservations
       parameters:
       - name: user_id
-        in: path
-        required: true
+        in: query
         schema:
           type: string
       - name: Authorization
@@ -49,8 +48,7 @@ paths:
       - Reservations
       parameters:
       - name: user_id
-        in: path
-        required: true
+        in: query
         schema:
           type: string
       - name: Authorization
@@ -83,6 +81,39 @@ paths:
                   - city
                   - reserve_date
                   - console_id
+  "/api/v1/reservations/{id}":
+    delete:
+      summary: Delete a reservation
+      tags:
+      - Reservations
+      parameters:
+      - name: user_id
+        in: query
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: reservation found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                - message
+        '404':
+          description: reservation not found
 servers:
 - url: https://{defaultHost}
   variables:
