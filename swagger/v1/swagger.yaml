@@ -4,6 +4,39 @@ info:
   title: API V1
   version: v1
 paths:
+  "/api/v1/consoles":
+    get:
+      summary: Retrieves all consoles
+      tags:
+      - Consoles
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: consoles found
+  "/api/v1/consoles/{id}":
+    get:
+      summary: Retrieves a console
+      tags:
+      - Consoles
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: console found
+        '404':
+          description: console not found
   "/api/v1/reservations":
     post:
       summary: create a reservation
