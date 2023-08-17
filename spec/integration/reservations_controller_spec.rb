@@ -18,12 +18,20 @@ describe 'Reservations API' do
     )
   end
 
+  let(:valid_reservation_params) do
+    {
+      user_id: @user.id,
+      city: 'New York',
+      reserve_date: '2023-12-12',
+      console_id: @console.id
+    }
+  end
   path '/api/v1/reservations' do
     post 'create a reservation' do
       tags 'Reservations'
       consumes 'application/json'
       let(:user_id) { @user.id }
-      parameter name: :user_id, in: :path, type: :string
+      parameter name: :user_id, in: :query, type: :string
       parameter name: 'Authorization', in: :header, type: :string
       parameter name: :reservation, in: :body, schema: {
         type: :object,
@@ -66,7 +74,7 @@ describe 'Reservations API' do
       tags 'Reservations'
       produces 'application/json'
       let(:user_id) { @user.id }
-      parameter name: :user_id, in: :path, type: :string
+      parameter name: :user_id, in: :query, type: :string
       parameter name: 'Authorization', in: :header, type: :string
 
       response '200', 'reservations found' do
@@ -93,6 +101,35 @@ describe 'Reservations API' do
           )
         end
 
+        run_test!
+      end
+    end
+  end
+
+  path '/api/v1/reservations/{id}' do
+    delete 'Delete a reservation' do
+      tags 'Reservations'
+      produces 'application/json'
+      let(:user_id) { @user.id }
+      parameter name: :user_id, in: :query, type: :string
+      parameter name: :id, in: :path, type: :string
+      parameter name: 'Authorization', in: :header, type: :string
+
+      response '200', 'reservation found' do
+        schema type: :object,
+               properties: {
+                 message: { type: :string }
+               },
+               required: %w[message]
+        let(:Authorization) { @auth }
+        let(:id) { Reservation.create(valid_reservation_params).id }
+
+        run_test!
+      end
+
+      response '404', 'reservation not found' do
+        let(:Authorization) { @auth }
+        let(:id) { 999 }
         run_test!
       end
     end
