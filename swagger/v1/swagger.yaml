@@ -9,7 +9,16 @@ paths:
       summary: create a reservation
       tags:
       - Reservations
-      parameters: []
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        schema:
+          type: string
       responses:
         '201':
           description: reservation created
@@ -42,6 +51,10 @@ paths:
       - name: user_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: Authorization
+        in: header
         schema:
           type: string
       responses:
