@@ -48,5 +48,5 @@ describe 'Console API' do
         run_test!
       end
     end
-  end 
+  end
 end

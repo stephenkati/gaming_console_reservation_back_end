@@ -1,5 +1,5 @@
 require 'swagger_helper'
-
+# rubocop:disable Metrics/BlockLength
 describe 'Console API' do
   before do
     @user = User.find_by(username: 'test')
@@ -44,14 +44,16 @@ describe 'Console API' do
                required: %w[status message data]
 
         let(:Authorization) { @auth }
-        let(:id) { Console.create(
-          name: 'Playstation 5',
-          purchase_price: 10_000,
-          rental_price: 100,
-          description: 'Playstation 5',
-          photo: 'photo url'
-        ).id }
-        
+        let(:id) do
+          Console.create(
+            name: 'Playstation 5',
+            purchase_price: 10_000,
+            rental_price: 100,
+            description: 'Playstation 5',
+            photo: 'photo url'
+          ).id
+        end
+
         run_test!
       end
 
@@ -63,3 +65,4 @@ describe 'Console API' do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
