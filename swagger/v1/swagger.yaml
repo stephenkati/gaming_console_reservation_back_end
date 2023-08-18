@@ -5,6 +5,42 @@ info:
   version: v1
 paths:
   "/api/v1/consoles":
+    post:
+      summary: Creates a console
+      tags:
+      - Consoles
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: console created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                purchase_price:
+                  type: number
+                rental_price:
+                  type: number
+                description:
+                  type: string
+                photo:
+                  type: string
+              required:
+              - name
+              - purchase_price
+              - rental_price
+              - description
+              - photo
     get:
       summary: Retrieves all consoles
       tags:
@@ -18,6 +54,25 @@ paths:
         '200':
           description: consoles found
   "/api/v1/consoles/{id}":
+    delete:
+      summary: Deletes a console
+      tags:
+      - Consoles
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: console deleted
+        '404':
+          description: console not found
     get:
       summary: Retrieves a console
       tags:
