@@ -26,7 +26,7 @@
 
 **[Gaming_console_reservation_back_end]** is a backend rails api that provides service to the front-end react app to fetch data for gaming console reservation.
 
-## [Link to the front-end repo]()
+## [Link to the front-end repo](https://github.com/stephenkati/gaming_console_reservation_front_end.git)
 
 <!-- Below is the link to the database diagram
 
