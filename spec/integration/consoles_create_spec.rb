@@ -1,5 +1,5 @@
 require 'swagger_helper'
-
+# rubocop:disable Metrics/BlockLength
 describe 'Console API' do
   before do
     @user = User.find_by(username: 'test')
@@ -59,3 +59,4 @@ describe 'Console API' do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
