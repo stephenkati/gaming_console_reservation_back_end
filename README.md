@@ -123,6 +123,7 @@ To run tests, run the following command:
  
 - GitHub: [@githubhandle](https://github.com/stephenkati)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/stephen-katuli/)
+- Twitter: [@twitterhandle](https://twitter.com/stephen57913145)
 
 👤 **Author3**
 *[Miles Mosweu]*
