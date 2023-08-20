@@ -28,9 +28,6 @@
 
 ## [Link to the front-end repo](https://github.com/stephenkati/gaming_console_reservation_front_end.git)
 
-<!-- Below is the link to the database diagram
-
-<img src="" alt="" /> -->
 
 ## 🛠 Built With <a name="built-with"></a>
 
