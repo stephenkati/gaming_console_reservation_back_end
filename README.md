@@ -135,6 +135,7 @@ To run tests, run the following command:
 👤 **Author4**
 *[Yacoubou Seidou]*
 - GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
+- Linkedin: [Linkedin](https://www.linkedin.com/in/yacoubou-seidou-chaibou)
 
 
 
