@@ -136,6 +136,7 @@ To run tests, run the following command:
 *[Yacoubou Seidou]*
 - GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
 - Linkedin: [Linkedin](https://www.linkedin.com/in/yacoubou-seidou-chaibou)
+- Website: https://yacoubou-seidou-portfolio.vercel.app/
 
 
 
