@@ -28,9 +28,6 @@
 
 ## [Link to the front-end repo](https://github.com/stephenkati/gaming_console_reservation_front_end.git)
 
-<!-- Below is the link to the database diagram
-
-<img src="" alt="" /> -->
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -110,6 +107,38 @@ To run tests, run the following command:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Author1**
+ *[NALEDI DIKGALE]*
+ 
+- GitHub: [@githubhandle](https://github.com/Naledi-Dikgale)
+- Twitter: [@twitterhandle](https://twitter.com/ChichiTheStar)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/naledi-dikgale-068423159/)
+- Website: https://naledi-dikgale.github.io/mobile-portfolio/
+
+👤 **Author2**
+*[Stephen Katuli]*
+ 
+- GitHub: [@githubhandle](https://github.com/stephenkati)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stephen-katuli/)
+- Twitter: [@twitterhandle](https://twitter.com/stephen57913145)
+
+👤 **Author3**
+*[Miles Mosweu]*
+
+- GitHub: [@Timbar09](https://github.com/Timbar09)
+- Twitter: [@Milez09](https://twitter.com/Milez09)
+- LinkedIn: [@miles-mosweu09](https://www.linkedin.com/in/miles-mosweu09)
+
+👤 **Author4**
+*[Yacoubou Seidou]*
+- GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
+- Linkedin: [Linkedin](https://www.linkedin.com/in/yacoubou-seidou-chaibou)
+- Website: https://yacoubou-seidou-portfolio.vercel.app/
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
