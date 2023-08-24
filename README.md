@@ -21,7 +21,6 @@
 - [:question: FAQ](#faq)
 - [:memo: License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 # 📖 [Gaming_console_reservation_back_end] <a name="about-project"></a>
 
 **[Gaming_console_reservation_back_end]** is a backend rails api that provides service to the front-end react app to fetch data for gaming console reservation.
