@@ -146,7 +146,7 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Rendering and reserving bicycles]**
+- [] **[Rendering and reserving Laptops]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
