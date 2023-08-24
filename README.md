@@ -3,6 +3,7 @@
 <a name="readme-top"></a>
 
 # 📗 Table of Contents
+
 - [:book: About the Project](#about-project)
   - [:hammer_and_wrench: Built With](#built-with)
     - [Tech Stack](#tech-stack)
@@ -27,10 +28,10 @@
 
 ## [Link to the front-end repo](https://github.com/stephenkati/gaming_console_reservation_front_end.git)
 
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
+
 <details>
   <summary>Ruby on Rails</summary>
   <ul>
@@ -47,7 +48,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
@@ -55,6 +55,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
+
 - Install Ruby
 - Install Rails
 - Install Postgresql
@@ -78,7 +79,7 @@ Install this project with:
 ```
 
 ```sh
-  gem install --no-document rubocop -v '>= 1.0, < 2.0' 
+  gem install --no-document rubocop -v '>= 1.0, < 2.0'
 ```
 
 ### Usage
@@ -86,6 +87,9 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
+  rails db:create
+  rails db:migrate
+  rails db:seed
   rails server
 ```
 
@@ -94,56 +98,49 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  rspec ./spec/integration
-  rspec ./spec/requests
-  rspec ./spec/model
-  rake rswag:specs:swaggerize
+  rspec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Author1**
- *[NALEDI DIKGALE]*
- 
+_[NALEDI DIKGALE]_
+
 - GitHub: [@githubhandle](https://github.com/Naledi-Dikgale)
 - Twitter: [@twitterhandle](https://twitter.com/ChichiTheStar)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/naledi-dikgale-068423159/)
 - Website: https://naledi-dikgale.github.io/mobile-portfolio/
 
 👤 **Author2**
-*[Stephen Katuli]*
- 
+_[Stephen Katuli]_
+
 - GitHub: [@githubhandle](https://github.com/stephenkati)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/stephen-katuli/)
 - Twitter: [@twitterhandle](https://twitter.com/stephen57913145)
 
 👤 **Author3**
-*[Miles Mosweu]*
+_[Miles Mosweu]_
 
 - GitHub: [@Timbar09](https://github.com/Timbar09)
 - Twitter: [@Milez09](https://twitter.com/Milez09)
 - LinkedIn: [@miles-mosweu09](https://www.linkedin.com/in/miles-mosweu09)
 
 👤 **Author4**
-*[Yacoubou Seidou]*
+_[Yacoubou Seidou]_
+
 - GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
 - Linkedin: [Linkedin](https://www.linkedin.com/in/yacoubou-seidou-chaibou)
 - Website: https://yacoubou-seidou-portfolio.vercel.app/
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [] **[Rendering and reserving Laptops]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -152,21 +149,18 @@ Feel free to check the [issues page](https://github.com/stephenkati/gaming_conso
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐ Show your support <a name="support"></a>
 
 If you like this project please show support by staring :star:️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🙏Acknowledgments <a name="acknowledgements"></a>
 
-* WE would like to thank Microverse for providing adequate learning material and a safe learning environment.
-* We would like to extend our sincerest gratitude for [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for this beautiful design.
+- WE would like to thank Microverse for providing adequate learning material and a safe learning environment.
+- We would like to extend our sincerest gratitude for [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for this beautiful design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
