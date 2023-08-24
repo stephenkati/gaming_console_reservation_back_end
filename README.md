@@ -21,7 +21,6 @@
 - [:question: FAQ](#faq)
 - [:memo: License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 # 📖 [Gaming_console_reservation_back_end] <a name="about-project"></a>
 
 **[Gaming_console_reservation_back_end]** is a backend rails api that provides service to the front-end react app to fetch data for gaming console reservation.
@@ -39,8 +38,6 @@
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
 - **[Render gaming-consoles]**
@@ -50,7 +47,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -106,7 +102,6 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -142,15 +137,13 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Rendering and reserving bicycles]**
+- [] **[Rendering and reserving Laptops]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -159,7 +152,6 @@ Feel free to check the [issues page](https://github.com/stephenkati/gaming_conso
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐ Show your support <a name="support"></a>
 
@@ -167,7 +159,6 @@ If you like this project please show support by staring :star:️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏Acknowledgments <a name="acknowledgements"></a>
 
@@ -176,7 +167,6 @@ If you like this project please show support by staring :star:️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
