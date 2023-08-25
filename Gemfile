@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.2'
-
+ruby '>=3.1.2'
+gem 'devise_token_auth'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'omniauth'
 gem 'rails', '~> 7.0.7'
-
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -34,11 +34,13 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+gem 'rack-cors'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -46,4 +48,10 @@ group :development do
   # gem "spring"
 end
 
-gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'cancancan'
+gem 'devise'
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'rails-controller-testing'
+gem 'rswag'
+gem 'rubocop'
