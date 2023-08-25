@@ -33,4 +33,5 @@ test:
 
 production:
   <<: *default
-  database: gaming_console_rental_back_end_production
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: gaming_console_rental_back_end_production

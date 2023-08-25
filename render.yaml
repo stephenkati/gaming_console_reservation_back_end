@@ -1,0 +1,18 @@
+databases:
+  - name: gaming_console_reservation
+    databaseName: gaming_console_reservation
+    user: gaming_console_reservation_user
+
+services:
+  - type: web
+    name: gaming_console_reservation
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: gaming_console_reservation
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
